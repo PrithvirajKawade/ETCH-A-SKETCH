@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <!-- onmousedown ="mouseDown()" onmouseup="mouseUp() -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<!-- onmousedown ="mouseDown()" onmouseup="mouseUp() -->
-
-<body>
+  <body>
     <div class="flexContainer">
-        <div class="title">
-            <h1>Etch A Sketch</h1>
+      <div class="title">
+        <h1>Etch A Sketch</h1>
+      </div>
+      <div class="mode">Mode: Coloring</div>
+      <div class="content">
+        <div class="board"></div>
+        <div class="buttons">
+          <button onclick="changeColor('black')">Black</button>
+          <button onclick="changeColor('white')">Erase</button>
+          <button onclick="changeColor('gray')">Gray</button>
+          <button onclick="changeColor('random')">Random</button>
+          <!-- <input type="color" id="colorSelect"> -->
+          <button onclick="reset()">Reset</button>
         </div>
-        <div class="mode">Mode: Coloring</div>
-        <div class="content">
-            <div class="board"></div>
-            <div class="buttons">
-                <button onclick="changeColor('black')">Black</button>
-                <button onclick="changeColor('white')">Erase</button>
-                <button onclick="changeColor('gray')">Gray</button>
-                <button onclick="changeColor('random')">Random</button>
-                <!-- <input type="color" id="colorSelect"> -->
-                <button onclick="reset()">Reset</button>
+        <div class="container">
+          <div class="range">
+            <div class="sliderValue">
+              <span>16</span>
             </div>
-            <div class="container">
-                <div class="range">
-                    <div class="sliderValue">
-                        <span>16</span>
-                    </div>
-                    <div class="classField"></div>
-                    <div class="field">
-                        <div class="value left">1</div>
-                        <input id="slider" type="range" min="1" max="62" step="1" value="16">
-                        <div class="value right">62</div>
-                    </div>
-                </div>
+            <div class="classField"></div>
+            <div class="field">
+              <div class="value left">1</div>
+              <input
+                id="slider"
+                type="range"
+                min="1"
+                max="62"
+                step="1"
+                value="16"
+              />
+              <div class="value right">62</div>
             </div>
-            <div id="gsize">
-                Choose a Grid Size!
-            </div>
+          </div>
         </div>
+        <div id="gsize">Choose a Grid Size!</div>
+      </div>
     </div>
-</body>
-<script src="index.js"></script>
-
+  </body>
+  <script src="index.js"></script>
 </html>
